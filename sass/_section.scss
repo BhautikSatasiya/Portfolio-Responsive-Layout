@@ -1,0 +1,19 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.cta{
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+   
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

@@ -1,0 +1,77 @@
+// COLOR VARIABLES
+$color-primary-dark: #272727;
+$color-primary-light: #454545;
+$color-primary-grey: #747474;
+
+$color-secondary-main: #F3F6FD;
+$color-secondary: #FFFFFF;
+
+
+
+// FONT VARIABLES
+$font-poppins: 'Poppins', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 48em;    // 768px;
+$bp-small: 37.5em;    // 600px;
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 56.25%; // 9px/16px = 56.25% -> 1rem = 9px
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; // 8px/16px = 50% -> 1rem = 8px
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 43%; // 7px/16px = 43% -> 1rem = 7px
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 62.5%; 
+    }
+
+}
+
+body {
+    font-family: $font-poppins;
+    color: $color-primary-dark;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+
+    height: 100vh;
+    background-color: $color-secondary-main;
+
+    overflow-y: hidden;
+    
+
+    @media only screen and (max-width: $bp-small) {
+        height: 70rem;
+
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+        width: 0;
+    }
+    }
+    
+}
